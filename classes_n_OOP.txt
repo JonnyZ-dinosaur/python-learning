@@ -1,0 +1,84 @@
+Classes and OOP
+
+Classes are essentially blueprints to create objects. They include the way to 
+create an object. Within the class, it also includes methods that can be called
+for these objects.
+
+In this example, the class is the Person, the object is whatever is being
+created, so Emil and she's 36 years old. Methods are what the objects can do,
+essentially actions that the objects do. the function __init__ must be in every
+class, as they are the blueprint under the class, and the rest of the functions
+are the methods. You must have self as one of the parameters as it is the object
+the parameters after essentially make the object what the object is. In this
+example, self is the object, and then the other parameters make the person's name
+and age. The person's name can be accessed through the .name command as it is a 
+variable in the class, this is a property of the object. Methods can be called 
+through .methodName and then in the parameter, you put the object name. When a 
+class is created, its properties and methods cannot be accessed by anywhere other
+than the object that was created by the class. 
+
+ex.) 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def greet(self):
+        print("Hello, my name is " + self.name)
+
+p1 = Person("Emil", 36)
+
+print(p1.name)
+print(p1.age)
+
+Lists are a class:
+The objects created are the lists that you create (list = []) and the properties
+are the length and other stuff. The methods are adding, removing and using a list
+with methods such as .append, .pop and .remove 
+
+Inheritance: 
+Classes can inherit the properties and the methods of another class through the
+notation of: class Name(inheritClass), that way, the objects from Name can access
+and use the methods and properties from inheritClass. However, if you write a
+__init__ function within the new class, it completely overrides the parent
+function's __init__ function and therefore you have to write:
+inheritClass.__init__(self, properties) right under the __init__ function of the
+Name class. Otherwise, you could use super().__init__(properties). 
+
+Universal Properties:
+Properties(variables) stated at the beginning of the class, it is not within
+the __init__ function and therefore all objects created using this class has 
+this property, you can also access this property by calling Class.property
+However, if you change the property that is universal for one of the objects,
+by writing object.property, it creates an independent property that is unique 
+to that object and therefore, even if the universal property is changed, 
+the object's property is still the changed one due to it not being affected 
+by the universal one anymore
+
+ex.)
+Say that the universal property was "New York" 
+
+print(Person.city)
+print(person2.city)
+-These would print "New York" due to having the same property
+Person.city = "Seattle"
+-This would then change the city property to Seattle and when run again,
+they would print Seattle
+print(person.city)
+print(person2.city)
+
+person2.city = "Washington"
+-However, this creates an independent property, so the city property for 
+person2 ONLY is Washington 
+
+Person.city = "Denver"
+-When the city property in the class is changed, it only changes the property
+for person and not person2 because person2's independent cannot be overriden 
+unless specifically changed
+
+Encapsulation:
+Encapsulation is like protecting the data within the class, so that people can't
+directly access the information. To do this, you simple write 2 underscores right
+after self. ex.) self.__info, therefore when you try and get self.__info, you
+there would be no information. Howvever, the methods within the class can still
+access this info, and therefore methods still work with this info and you could
+(if you wanted to) get a method that prints the hidden info.

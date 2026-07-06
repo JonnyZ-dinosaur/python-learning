@@ -1,0 +1,57 @@
+MatPlot and Drawing Graphs
+
+To start drawing a graph and plotting:
+import matplotlib.pyplot as plt
+import numpy as np
+These have the classes and functions that allow for the drawing of the graph and lines.
+
+For the x points and y points, declare a variable for each set. Ex.)
+ypoints = np.array([3, 8, 1, 10])
+xpoints = np.array([2, 4, 6, 8])
+
+Use the array method for each set, x points are the x-values for every dot and y points 
+are all the y values, not every coordinate. Make sure that the (x,y) coordinate is at the
+same index. 
+
+Then to plot, call the plot method from plt, and have parameters of the x and y points
+ex.) plt.plot(xpoints,ypoints)
+Also within the parameters, you can change the color, color = "color"; you can change the 
+linestyle(dotted, dashed), ls = "linestyle"; line width, lw = line Width, and marker(the
+point itself), marker = "o", ms = MarkerSize, mec = MarkerEdgeColor, mfc = MarkerFaceColor
+
+To show the grid lines: 
+Call plt.grid() and in the parameters you can adjust what axis you want to see by writing 
+in the parameters axis = "x" or axis = "y"
+
+Labels:
+plt.xlabel("label") gives the x axis a label whereas 
+plt.ylabel("label") gives the y axis a label 
+plt.title("label") gives the whole graph a label 
+plt.suptitle("label") gives the whole thing a label, for when you have more than one graph
+putting fontdict = font into the parameter of the label allows for you to change the font
+of the label, first set the font variable into a dictionary, with 
+{'family':"font", 'color': 'color', 'size': size}
+
+
+Given plt.plot(xpoints, ypoints):
+
+Can use scatter instead of plot to get a scatter plot
+
+Also can use bar, but remember that bars dont have both a x and y value its either or 
+therefore, one parameter should contain values and the other should contain names
+
+Or you could draw a histogram and you could use numpy to generate random values 
+by calling: variable = np.random.normal(a,b,c)
+A is the number that the values will concentrate around, b is the standard deviation and c is the number of values 
+
+Drawing pie charts:
+Only use one set of values(x or y not both), in the array, instead of points its the percentages of the pie
+adding a labels parameter allows for the addition of labels through an array |label = labelArray| 
+start angle parameter allows for you to start at whatever angle you want to, counterclockwise
+explode paramter allows for one section(or more) to stand out and get pulled away from the pie chart
+explode = [explodeArray], where in the array, in order, of how much you want to pull the peice away 
+shadows = true turns on shadows(put as a parameter) 
+similar to the rest, adding color in a list
+
+
+

@@ -1,0 +1,102 @@
+Python
+Printing without starting a new line:
+ex.) print("Hello World!", end=" ")
+The -end=" " makes sure that whatever is printed next does not start
+a new line, but instead goes right next to the thing
+that was previously printed
+
+Strings:
+Strings are immutable, meaning the characters cannot be changed
+If you have a string that is very long and needs more than one line,
+use triple quotes, start writing the string on the same line as the 
+quotes
+
+Continue, Break:
+Break completely stops the iteration or selection statement, ending
+it and not executing the commands after it 
+Continue skips the next steps that are written after the continue
+statement, but continues the loop 
+
+Random Generator 
+import random 
+random.randint(min,max) ---for integers
+random.choice([choice 1, choice 2, choice 3])
+
+Input
+variable = input(Question)
+
+main function:
+def main():
+
+f-strings:
+Allows for you to add variables in the midddle of a string 
+print(f"string {variable}")
+
+importing files:
+you can import different files into the code using: import fileName
+You can also just import from fileName import function
+This allows for the calling of the specific function from the file that was
+imported despite not being within the code when calling the function, you must
+write fileName.function() instead of just going straight to the function
+You are also allowed to rename a imported file by writing: import fileName as 
+....fn, now instead of typing fileName.function you can type fn.function
+
+Accessing Files:
+To open a file, you can either do: f = open("file.name") or: with open("file.name")
+as f. To read it, use f.read(), and you could but in a parameter of how many 
+characters you want. In order to seperate every word into words from the file, 
+use the .split method. You have to loop through every line in the file and split it
+
+
+ex.)
+
+#Opens file
+with open("demo.txt") as f:
+#Loops through every line 
+    for x in f:
+#splits every word, splits at every white space
+        words = x.split()
+    
+#This one loops through every word in the line and then does whatever it needs
+to do in the for loop.
+        for word in words:
+            if word in frequency:
+                frequency[word] += 1
+            else:
+                frequency[word] = 1 
+
+PIP:
+Sometimes you need to install some things in order to use a certain library, it usually
+comes up as an error, where you don't have a certain file or command or smth and therefore,
+in the linux command center, write install and whatever you need
+
+ex.) missing 'command'
+pip3 install command 
+In the linux center, where you access all the files, create, edit and rename and everything
+
+Json Files:
+A type of file used to store information. However, what makes it different from the rest,
+csv and txt files, is that it is structured and organized, but is still flexible to change.
+Csv files are your standard excel, sheet, that have columns that can hold only one value,
+making them not flexible, txt files, are just straight text and have no structure.
+However, json files are usually a dictionary or a list, filled with information. 
+
+When using a json file, always import json at the start. Then, to put a dictionary, list or
+whatever into a json file: 
+with open(fileName ,"w") as nickname:
+#this opens the file, and "w" is for you to write in it 
+#Then, dump it using json.dump()
+variable(anyname) = json.dump(dictionary/list, nickname)
+#This dumps the specific list or dictionary into the json file for when you need it 
+
+To open a json file and update it:
+import json
+variable(any)  = json.load(open(fileName ,"r"))
+
+This loads the file to read and then at the end, make sure to dump it back into the file 
+to save
+
+Pandas:
+
+Series:
+One dimensional array of any data, technically a column in a data table

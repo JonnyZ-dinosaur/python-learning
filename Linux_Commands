@@ -1,0 +1,39 @@
+Basic Linux Commands 
+pwd: tells where we are: file under file under file 
+-- just type it out 
+
+cd: which one of the folders you want to go to, change directory 
+--type cd and then which folder you want to head into 
+--cd .. goes back one step 
+
+ls: lists all the files under the folder in which you are in
+-- just type it out 
+
+mv: renames the file 
+-- type mv and then the name of the that is renamed and then the new name 
+-- ex.) mv nameOfFile newName 
+
+cp: makes a copy of the file
+-- call cp then the name of the one that a copy is made of then the name of the new file
+--ex.) cp orginalFile newFileName
+
+touch: creates a new file 
+--call touch and then the name of the new file 
+--ex.) touch newFile
+
+rm: removes a file 
+-- call rm and also just the file name 
+--ex.) rm deleteFile
+
+head, tail, cat: opens the file 
+head prints the first 10 lines, tail does the last 10 lines and cat opens the whole thing
+--call head/tail/cat and then the file name that is being opened 
+--ex.) head/tail/cat fileName 
+**Note: add .py to the end of the name to create a file where code can be written 
+
+man: using this explains what a command does, kind of like a docs tab;
+however, it can be a little hard to understand
+--call man and then the command name 
+--ex.) man commandName(any of the above), to go back press q
+
+python3 fileName: executes and runs the code

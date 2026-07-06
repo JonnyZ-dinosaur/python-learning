@@ -1,0 +1,58 @@
+Dictionaries: 
+
+How to create:
+var = {key1: val1, key2: val2}
+can also be written as:
+var  =  {
+    key1: val1,
+    key2: val2
+}
+
+Dictionaries: used to store information and also connect peices of info together such
+names of someone and their age. Keys cannot be the same, but values can. In order to get 
+the values, you call the key that is linked up with the value that is being requested 
+such as print(dictionary(key)). It can also store all kinds of data such as strings,
+floats, booleans and integers
+
+Common dictionary commands:
+
+Getting a value from the dictionary:
+dictionary.get(keyName)
+or -- dictionary[key]
+
+Getting all the keys of the dictionary:
+dictionary.keys()
+
+Getting all valyes in the dictionary:
+dictionary.values()
+
+Getting all key-value pairs within a dictionary
+dictionary.items()
+
+Updating a value or adding a value:
+dictionary.update({key: newValue})
+adding
+dictionary.update({newKey: newValue})
+dictionary[key] = newValue
+update just allows for the addition of more than one key and value pair
+
+Checking if a key exists:
+if key in dictionary
+
+Length of the dictionary
+len(dictionary)
+
+Removing items:
+dictionary.pop(key) -- removes specific pair, returns the value only
+dictionary.popitem() -- removes the last pair, returns the pair 
+
+Clearing the whole dictionary:
+dictionary.clear()
+
+You can have more than one value for one key, just put it into a list 
+key: [value 1, value 2]     
+
+Looping through a dictionary:
+You can loop through a dictionary by putting the key, value in the dictionary
+However, remember to have dictionary.items() so that it loops every single item
+
